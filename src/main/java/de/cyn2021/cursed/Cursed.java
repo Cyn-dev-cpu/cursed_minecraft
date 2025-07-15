@@ -29,8 +29,6 @@ public class Cursed {
         ModGameRules.register(modBus);
         Config.register();
 
-
-
         modBus.addListener(this::addToCreativeTab);
         modBus.addListener(this::onClientSetup);
 
@@ -50,7 +48,7 @@ public class Cursed {
             ItemProperties.register(
                     ModItems.SAD_APPLE.get(),
                     ResourceLocation.fromNamespaceAndPath(Cursed.MOD_ID, "sad_apple_property"),
-                    SadAppleItemRenderer::getProperty
+                    (stack, level, entity, seed) -> 1.0F // oder SadAppleItemRenderer::getProperty
             );
             // Die Renderer-Registrierung erfolgt im passenden Event in ClientModEvents.java
         });

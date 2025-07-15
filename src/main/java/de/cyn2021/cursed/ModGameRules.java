@@ -9,6 +9,8 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = Cursed.MOD_ID)
 public class ModGameRules {
 
+    public static final GameRules.Key<GameRules.BooleanValue> ENABLE_CAPTCHA =
+            GameRules.register("enableCaptcha", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
     public static final GameRules.Key<GameRules.BooleanValue> SPAWN_ON_APPLE_EAT =
             GameRules.register("spawnMobOnAppleEat", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 

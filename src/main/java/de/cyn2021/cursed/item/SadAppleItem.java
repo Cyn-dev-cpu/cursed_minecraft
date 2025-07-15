@@ -25,7 +25,11 @@ public class SadAppleItem extends Item {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
         if (!level.isClientSide && entity instanceof Player player) {
-            player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 60 * 20, 1));
+            // Effekte wie Enchanted Golden Apple
+            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 400, 1)); // 20 Sekunden, Stufe 2
+            player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 3));  // 2 Minuten, Stufe 4
+            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 0));  // 5 Minuten, Stufe 1
+            player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 6000, 0)); // 5 Minuten, Stufe 1
         }
         return super.finishUsingItem(stack, level, entity);
     }
@@ -35,7 +39,6 @@ public class SadAppleItem extends Item {
         return 32;
     }
 
-    @Override
     public UseAnim getUseAnimation(ItemStack stack) {
         return UseAnim.EAT;
     }

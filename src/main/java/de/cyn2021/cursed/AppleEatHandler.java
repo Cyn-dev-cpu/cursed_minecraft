@@ -19,6 +19,7 @@ public class AppleEatHandler {
             player.playSound(SoundEvents.VILLAGER_NO);
 
             if (player.level() instanceof ServerLevel serverLevel) {
+// Entferne diese Zeile, um keine Partikel zu erzeugen:
                 serverLevel.sendParticles(
                         new net.minecraft.core.particles.ItemParticleOption(
                                 net.minecraft.core.particles.ParticleTypes.ITEM,
