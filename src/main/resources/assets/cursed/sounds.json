@@ -1,4 +1,5 @@
 {
   "sad_apple_spawn": { "sounds": [ "cursed:sad_apple_spawn" ] },
-  "sad_apple_scream": { "sounds": [ "cursed:sad_apple_scream" ] }
-}s
+  "sad_apple_scream": { "sounds": [ "cursed:sad_apple_scream" ] },
+  "you_died": { "sounds": [ "cursed:dark-souls-you-died-sound-effect" ] }
+}

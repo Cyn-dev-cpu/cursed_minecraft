@@ -1,5 +1,6 @@
 package de.cyn2021.cursed;
 
+import de.cyn2021.cursed.client.*;
 import de.cyn2021.cursed.client.renderer.SadAppleItemRenderer;
 import de.cyn2021.cursed.entity.*;
 import de.cyn2021.cursed.item.ModItems;
